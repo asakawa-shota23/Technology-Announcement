@@ -2,15 +2,60 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>簡易スライドショー</title>
+    <title>JS基礎固め</title>
+    <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
 <body>
-    <!-- nextボタン -->
-    <button id="nextBtn">NEXT</button>
-    <!-- 画像タイトル -->
-    <h1 id="title"></h1>
-    <!-- 画像要素を入れるためのボックス -->
-    <div id="photo"></div>
+    <!-- ヘッダー -->
+    <header id="top">
+        <h1><a href="top.html"><img src="img/who-am-i.jpeg" alt="Who Am I"></a></h1>
+        <nav class="clearfix">
+            <ul>
+                <li><a href="top.html">簡単な自己紹介</a></li>
+                <li class="current"><a href="main.html">今回やったこと</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <!-- トップコンテンツの部分 -->
+        <top-wapper>
+                <h1>【初めてのJavascript実装】</h1>
+                <h3>＜目的＞</h3>
+                <p id="purpose"></p>
+
+                <h3>＜内容＞</h3>
+                <p id="contenttext"></p>
+        </top-wapper>
+        <!-- メインコンテンツの部分 -->
+        <main-wapper>
+            <!-- クリックスライド -->
+            <first-contents>
+                <h3>＜参考書を通じてやった内容＞</h3>
+                <h4>ボタンを押すことによって画像の入れ違いをすることができる</h4>
+                <!-- backボタン -->
+                <button id="backBtn">BAKC</button>
+                <!-- nextボタン -->
+                <button id="nextBtn">NEXT</button>
+                <!-- 補足文章説明 -->
+                <p id="explanation"></p>
+                <!-- 画像タイトル -->
+                <h1 id="title"></h1>
+                <!-- 画像要素を入れるためのボックス -->
+                <div id="photo"></div>
+            </first-contents>
+            <!-- スライドショー -->
+            <second-contents>
+                <h3>＜Google検索でプラスワン＞</h3>
+                <h4>ググりながら簡易スライドショーを作ってみた</h4>
+                <!-- 最初に表示させる画像 -->
+                <img id="myimg" src="img/daigakusai.jpg" alt="大学祭" width="600" height="400">
+                <input type="button" value="開始" onclick="start()">
+            </second-contents>
+        </main-wapper>
+        
+        <!-- ページトップボタン -->
+        <p class="page_top"><a href="#top">ページトップ</a></p>
+    </main>
 </body>
 </html>
