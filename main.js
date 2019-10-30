@@ -17,6 +17,7 @@ window.onload = () => {
     const nextBtn = document.getElementById("nextBtn");
     const title = document.getElementById("title");
     const explanation = document.getElementById("explanation");
+    const secondtext = document.getElementById("secondtext");
     console.log(purpose);
     console.log(contenttext);
     console.log(photo);
@@ -24,9 +25,10 @@ window.onload = () => {
     console.log(backBtn);
     console.log(nextBtn);
     console.log(explanation);
+    console.log(secondtext);
 
     // p要素（purpose）に文字列を追加
-    purpose.innerHTML = "第一言語取得のためにJavascriptの基礎を固めていきたい。<br>プロゲート等で何度かJavascriptについての勉強は行っているが実際にコードを書いてみる機会が少なす"
+    purpose.innerHTML = "第一言語取得のためにJavascriptの基礎を固めていきたい。<br>プロゲート等で何度かJavascriptについての勉強は行っているが実際にコードを書いてみる機会が少なく力がまだまだついていない。<br>一人でもっと活動範囲を広げていくために少しずつ出来ることを増やしていく。"
 
     // p要素（contenttext）に文字列の追加
     contenttext.innerHTML = "参考書（ノンプログラマのためのJavascript）を参考にJSの基礎をやっていきました。<br>期間が決まっている中で参考書に記載してあることはひと通りやってみてその中で工夫を加えてできることはないかと思い挑戦しました。<br>まだまだ覚えることが多く、何もできていないですがまずは<strong>エラーを恐れず</strong>たくさんのコードを書いていきます。"
@@ -34,6 +36,10 @@ window.onload = () => {
     // p要素(explanation)に文字列の追加
     explanation.innerHTML = "画像は全部で4枚あります。<br>「NEXT」をクリックすると一枚画像がす進み、「BACK」をクリックすると画像が一枚戻ります。<br>今回は自分自身が元々好きな競馬の写真を御覧ください。";
     console.log(explanation.innerHTML);
+
+    //h4要素に文字列の追加
+    secondtext.innerHTML = "Google検索を使用しながら簡易スライドショーを作ってみた。<br>今回は簡単に昔の写真を使用しスライドショーを作成。<br>自動的に流れる設定ではなく、開始ボタンを作成しクリックすることでスライドショーが始まるように設定した。"
+    console.log(secondtext);
 
     // img要素をHTMLに追加
     let item, img;
@@ -99,6 +105,7 @@ window.onload = () => {
      // 画像の初期表示のためにshowphoto関数を実行する
     showphoto(currentIndex);
 };
+
 
 // スライドショーの作成,画像の定義
 const imgs_src = ["img/daigakusai.jpg", "img/hittihaiku.jpg", "img/kyoto.jpg", "img/nisinosann.jpg", "img/zemi.jpg"];
