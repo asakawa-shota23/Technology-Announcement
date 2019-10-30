@@ -98,22 +98,22 @@ window.onload = () => {
 
      // 画像の初期表示のためにshowphoto関数を実行する
     showphoto(currentIndex);
-
-    // スライドショーの作成,画像の定義
-    const imgs_src = ["img/daigakusai.jpg", "img/hittihaiku.jpg", "img/kyoto.jpg", "img/nisinosann.jpg", "img/zemi.jpg"];
-    let num = -1;
-
-    // 開始ボタン、インターバルの設定
-    function start() {
-        setInterval(slideshow_timer, 3000);
-    }
-    // スライドショーが入れ替わる処理
-    function slideshow_timer() {
-        if (num === 4) {
-            num = 0;
-        } else {
-            num++;
-        }
-        document.getElementById("myimg").src = imgs_src[num];
-    }
 };
+
+// スライドショーの作成,画像の定義
+const imgs_src = ["img/daigakusai.jpg", "img/hittihaiku.jpg", "img/kyoto.jpg", "img/nisinosann.jpg", "img/zemi.jpg"];
+let num = -1;
+
+// 開始ボタン、インターバルの設定
+function start() {
+    setInterval(slideshow_timer, 3000);
+}
+// スライドショーが入れ替わる処理
+function slideshow_timer() {
+    if (num === 4) {
+        num = 0;
+    } else {
+        num++;
+    }
+    document.getElementById("myimg").src = imgs_src[num];
+}
