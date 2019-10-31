@@ -4,7 +4,7 @@ window.onload = () => {
         { src: "img/premia.jpg", title:"【名手レジェンド武豊J × ディープの子ワールドプレミア】"},
         { src: "img/Reideoro.jpg", title:"【最多勝騎手C.ルメール × ダービー馬レイデオロ】"},
         { src: "img/chaketora.jpg", title:"【牝馬の福永祐一J × シャケトラ】"},
-        { src: "img/mickyqoeen.jpg", title:"【小倉のスター浜中俊J　× ミッキークイーン】"}
+        { src: "img/mickyqoeen.jpg", title:"【小倉のスター浜中俊J × ミッキークイーン】"}
     ];
     let photoLength = photoList.length;
     console.log(photoList);
@@ -18,6 +18,7 @@ window.onload = () => {
     const title = document.getElementById("title");
     const explanation = document.getElementById("explanation");
     const secondtext = document.getElementById("secondtext");
+    const start = document.getElementById("start");
     console.log(purpose);
     console.log(contenttext);
     console.log(photo);
@@ -26,12 +27,15 @@ window.onload = () => {
     console.log(nextBtn);
     console.log(explanation);
     console.log(secondtext);
+    console.log(start);
 
     // p要素（purpose）に文字列を追加
     purpose.innerHTML = "第一言語取得のためにJavascriptの基礎を固めていきたい。<br>プロゲート等で何度かJavascriptについての勉強は行っているが実際にコードを書いてみる機会が少なく力がまだまだついていない。<br>一人でもっと活動範囲を広げていくために少しずつ出来ることを増やしていく。"
-
+    console.log(explanation.innerHTML);
+    
     // p要素（contenttext）に文字列の追加
     contenttext.innerHTML = "参考書（ノンプログラマのためのJavascript）を参考にJSの基礎をやっていきました。<br>期間が決まっている中で参考書に記載してあることはひと通りやってみてその中で工夫を加えてできることはないかと思い挑戦しました。<br>まだまだ覚えることが多く、何もできていないですがまずは<strong>エラーを恐れず</strong>たくさんのコードを書いていきます。"
+    console.log(explanation.innerHTML);
 
     // p要素(explanation)に文字列の追加
     explanation.innerHTML = "画像は全部で4枚あります。<br>「NEXT」をクリックすると一枚画像がす進み、「BACK」をクリックすると画像が一枚戻ります。<br>今回は自分自身が元々好きな競馬の写真を御覧ください。";
@@ -104,6 +108,12 @@ window.onload = () => {
 
      // 画像の初期表示のためにshowphoto関数を実行する
     showphoto(currentIndex);
+
+    // 開始ボタン、インターバルの設定
+    start.onclick = () => {
+    console.log(start);
+    setInterval(slideshow_timer, 3000);
+    }
 };
 
 
@@ -111,10 +121,7 @@ window.onload = () => {
 const imgs_src = ["img/daigakusai.jpg", "img/hittihaiku.jpg", "img/kyoto.jpg", "img/nisinosann.jpg", "img/zemi.jpg"];
 let num = -1;
 
-// 開始ボタン、インターバルの設定
-function start() {
-    setInterval(slideshow_timer, 3000);
-}
+
 // スライドショーが入れ替わる処理
 function slideshow_timer() {
     if (num === 4) {

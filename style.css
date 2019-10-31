@@ -81,6 +81,9 @@ section img {
     width: 600px;
 }
 .contens {
-    float: right;
     position: relative;
+}
+
+.contens ul li {
+    list-style: none;
 }
